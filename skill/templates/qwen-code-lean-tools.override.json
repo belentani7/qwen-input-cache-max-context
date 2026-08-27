@@ -1,0 +1,10 @@
+{
+  "tools": {
+    "toolSearch": {
+      "enabled": true,
+      "threshold": 0
+    },
+    "truncateToolOutputThreshold": 12000,
+    "truncateToolOutputLines": 300
+  }
+}

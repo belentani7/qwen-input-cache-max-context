@@ -1,0 +1,73 @@
+{
+  "$version": 3,
+  "env": {
+    "BAILIAN_API_KEY": "$BAILIAN_API_KEY"
+  },
+  "modelProviders": {
+    "openai": [
+      {
+        "id": "qwen3-coder-plus",
+        "name": "Qwen Coder Plus (Model Studio)",
+        "baseUrl": "$QWEN_BASE_URL",
+        "envKey": "BAILIAN_API_KEY",
+        "generationConfig": {
+          "extra_body": {
+            "enable_thinking": true
+          }
+        }
+      }
+    ]
+  },
+  "security": {
+    "auth": {
+      "selectedType": "openai"
+    }
+  },
+  "model": {
+    "name": "qwen3-coder-plus",
+    "reasoningEffort": "medium",
+    "sessionTokenLimit": 70000,
+    "maxToolCalls": 80,
+    "maxToolCallsPerTurn": 30,
+    "generationConfig": {
+      "enableCacheControl": true,
+      "samplingParams": {
+        "temperature": 0.2,
+        "top_p": 0.8,
+        "max_tokens": 2400
+      }
+    },
+    "chatCompression": {
+      "maxRecentFilesToRetain": 5,
+      "maxRecentImagesToRetain": 1
+    }
+  },
+  "context": {
+    "fileFiltering": {
+      "respectGitIgnore": true,
+      "respectQwenIgnore": true,
+      "enableFuzzySearch": true
+    },
+    "clearContextOnIdle": {
+      "toolResultsThresholdMinutes": 45,
+      "toolResultsNumToKeep": 5,
+      "toolResultsTotalCharsThreshold": 120000
+    }
+  },
+  "tools": {
+    "toolSearch": {
+      "enabled": true,
+      "threshold": 0
+    },
+    "truncateToolOutputThreshold": 12000,
+    "truncateToolOutputLines": 300
+  },
+  "general": {
+    "showSessionRecap": true,
+    "outputLanguage": "Spanish"
+  },
+  "ui": {
+    "enableWelcomeBack": true,
+    "shellOutputMaxLines": 80
+  }
+}

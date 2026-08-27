@@ -1,0 +1,43 @@
+{
+  "product": {
+    "name": "REEMPLAZAR",
+    "version": "REEMPLAZAR",
+    "type": "saas|mobile|api|ai|physical|hybrid",
+    "release_date": "YYYY-MM-DD"
+  },
+  "scope": {
+    "launch_mode": "pilot",
+    "markets": ["ES"],
+    "languages": ["es"],
+    "segments": ["adultos"],
+    "excluded_segments": ["menores"],
+    "channels": ["web"],
+    "volume_limit": "100 usuarios para piloto"
+  },
+  "regulatory": {
+    "triggers": [],
+    "assessment": "sin_detonante_identificado",
+    "owner": "legal@empresa.example",
+    "evidence": ["docs/regulatory-triage.md"],
+    "jurisdiction_notes": "Verificar requisitos por cada mercado antes de ampliar."
+  },
+  "gates": [
+    {"id": "G0", "status": "GO", "owner": "product@empresa.example", "evidence": ["docs/scope.md"], "risks": []},
+    {"id": "G1", "status": "GO_LIMITADO", "owner": "growth@empresa.example", "evidence": ["docs/beta-evidence.md"], "risks": ["Evidencia limitada al segmento inicial"]},
+    {"id": "G2", "status": "GO", "owner": "engineering@empresa.example", "evidence": ["reports/product-tests.md"], "risks": []},
+    {"id": "G3", "status": "GO", "owner": "security@empresa.example", "evidence": ["reports/security-review.md"], "risks": []},
+    {"id": "G4", "status": "GO", "owner": "privacy@empresa.example", "evidence": ["docs/data-map.md"], "risks": []},
+    {"id": "G5", "status": "NO_APLICA", "owner": "ai@empresa.example", "evidence": ["docs/no-ai-declaration.md"], "risks": []},
+    {"id": "G6", "status": "GO", "owner": "operations@empresa.example", "evidence": ["runbooks/launch.md"], "risks": []},
+    {"id": "G7", "status": "GO_LIMITADO", "owner": "commercial@empresa.example", "evidence": ["docs/claims-register.csv"], "risks": ["Canal de pago habilitado solo en España"]},
+    {"id": "G8", "status": "GO", "owner": "legal@empresa.example", "evidence": ["docs/regulatory-triage.md"], "risks": []},
+    {"id": "G9", "status": "GO_LIMITADO", "owner": "ceo@empresa.example", "evidence": ["docs/go-no-go-record.md"], "risks": ["Piloto limitado a 100 usuarios"]}
+  ],
+  "launch_controls": {
+    "kill_switch": "REEMPLAZAR con mecanismo y propietario",
+    "rollback": "REEMPLAZAR con procedimiento",
+    "incident_channel": "REEMPLAZAR",
+    "metrics": ["activación", "errores críticos", "quejas", "disponibilidad"],
+    "review_date": "YYYY-MM-DD"
+  }
+}

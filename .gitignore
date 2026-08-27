@@ -1,0 +1,17 @@
+# Secretos y configuración local
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+credentials*.json
+
+# Temporales y cachés
+__pycache__/
+*.py[cod]
+.DS_Store
+.cache/
+.tmp/
+
+# Informes de experimento locales
+cache-report.local.txt

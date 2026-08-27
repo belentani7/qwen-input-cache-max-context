@@ -1,0 +1,2 @@
+claim_id,claim_text,channel,market,segment,evidence_path,evidence_method,scope_limit,owner,legal_review,status,review_date
+CLM-001,REEMPLAZAR,web,ES,adultos,docs/evidence.md,medición o prueba,REEMPLAZAR,growth@empresa.example,pendiente,borrador,YYYY-MM-DD

@@ -1,0 +1,10 @@
+PERFIL: frontend
+MODELO: qwen3-coder-plus | región=REEMPLAZAR | endpoint=REEMPLAZAR
+RUTA_CACHÉ: qwen-code
+ENTRADA: REEMPLAZAR tokens
+CACHEADOS: REEMPLAZAR tokens | no disponible
+SALIDA: REEMPLAZAR tokens
+HERRAMIENTAS: REEMPLAZAR número y nombres
+VUELTAS: REEMPLAZAR número
+PRUEBA_FINAL: PASÓ
+CONCLUSIÓN: conservar | ajustar | revertir — REEMPLAZAR motivo y comparación
