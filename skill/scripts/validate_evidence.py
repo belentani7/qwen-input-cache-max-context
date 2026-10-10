@@ -15,7 +15,11 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--file", required=True)
     args = parser.parse_args()
-    text = Path(args.file).read_text(encoding="utf-8")
+    try:
+        text = Path(args.file).read_text(encoding="utf-8")
+    except (OSError, UnicodeDecodeError) as exc:
+        print(f"INVALID: no se puede leer el informe — {exc}")
+        return 2
 
     missing = [label for label in REQUIRED if label not in text]
     if missing:

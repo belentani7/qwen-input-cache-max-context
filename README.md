@@ -25,6 +25,7 @@ python3 skill/scripts/context_pack.py \
   --task "corregir una autorización entre API y React" \
   --budget-tokens 256000
 
+cp skill/templates/cache-report.txt cache-report.txt
 python3 skill/scripts/validate_cache_report.py --file cache-report.txt
 ```
 
